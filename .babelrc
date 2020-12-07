@@ -4,7 +4,7 @@
     ],
     "plugins": [
         "inline-react-svg",
-        "@ui-devtools/tailwind/babel",
+        // "@ui-devtools/tailwind/babel",
         [
             "styled-components",
             {
