@@ -23,9 +23,7 @@ const Container = styled.div`
     @apply text-base mb-4 text-blue-700 font-semibold;
   }
 
-  .page-grid {
-    @apply grid gap-6;
-  }
+
 
   @media (max-width: 700px) {
     .page-grid {
@@ -69,11 +67,6 @@ const Container = styled.div`
       grid-row-start: 4;
       grid-column-end: 4;
     }
-
-    .experience-section,
-    .highlight-section {
-      grid-column-end: 4;
-    }
   }
 
   p {
@@ -101,6 +94,10 @@ const Container = styled.div`
   @media print {
     /* styles here */
 
+    .pdf-download-btn{
+      display: none;
+    }
+
     section {
       @apply p-0 bg-white shadow-none border-gray-500;
     }
@@ -118,8 +115,8 @@ const ResumePage: NextPage = () => {
         <title>Utkarsh Bhimte's Resume</title>
       </Head>
       <div className="container mx-auto px-6 md:px-0">
-        <div className="page-grid">
-          <section className="header-section md:flex justify-between items-center mb-12 mt-10">
+        <div className="page-grid grid gap-4 md:grid-cols-3">
+          <section className="header-section flex justify-between items-center mb-12 mt-10 col-start-1 col-end-4">
             <div className="flex items-center">
               <Image
                 src="/profile-photo.jpg"
@@ -136,7 +133,7 @@ const ResumePage: NextPage = () => {
                 </a>
               </div>
             </div>
-            <div className="grid items-center gap-12 grid-cols-5 mt-6 md:mt-0 ">
+            <div className="grid items-center gap-12 md:grid-cols-5 grid-cols-4 mt-6 md:mt-0 ">
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -170,14 +167,14 @@ const ResumePage: NextPage = () => {
                 <BlogIcon />
               </a>
               <a
-                className="social-link"
+                className="social-link pdf-download-btn"
                 onClick={handlePrintButtonClick}>
                 <DownloadIcon />
               </a>
             </div>
           </section>
 
-          <section className="section-heading font-medium text-2xl mb-5">
+          <section className="section-heading font-medium text-2xl mb-5  col-start-1 col-end-3">
             <h3 className="section-heading font-medium text-2xl mb-4">Resume Highlights</h3>
             <ul className="text-sm text-gray-600">
               <li>
@@ -205,7 +202,7 @@ const ResumePage: NextPage = () => {
             </ul>
           </section>
 
-          <section className="experience-section mt-12 my-12">
+          <section className="experience-section mt-12 my-12 row-start-3 col-end-3">
             <h3 className="section-heading pb-0 font-medium text-2xl mb-4">Experience</h3>
             <div className="grid gap-10">
               <ExperienceBox
@@ -363,7 +360,7 @@ const ResumePage: NextPage = () => {
                 </a>
             </div>
           </section> */}
-          <section className="my-12">
+          <section className="row-start-2 col-start-3 row-end-5">
             <h3 className="section-heading mb-4 font-medium text-2xl">Skills</h3>
 
             <ul className="grid gap-4 text-sm text-gray-600">
