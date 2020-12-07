@@ -19,12 +19,12 @@
     "autoprefixer": "^9.8.5",
     "babel-plugin-styled-components": "^1.12.0",
     "next-compose-plugins": "^2.2.0",
+    "@ui-devtools/tailwind": "github:ui-devtools/tailwind",
     "playwright": "^1.5.2",
     "typescript": "^3.9.7"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.4",
-    "@ui-devtools/tailwind": "github:ui-devtools/tailwind",
     "babel-plugin-inline-react-svg": "^1.1.2",
     "clsx": "^1.1.1",
     "dayjs": "^1.8.29",
