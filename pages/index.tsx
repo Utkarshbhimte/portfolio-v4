@@ -1,10 +1,6 @@
 import { NextSeo } from "next-seo";
 import { GetStaticProps } from "next";
-import { Hero } from "../components/sections/hero";
-import { Work } from "../components/sections/work";
 import { Footer } from "../components/sections/footer";
-import { Achievements } from "../components/sections/achievements";
-import { GitHubActivity } from "../components/sections/github-activity";
 import { Post } from "../types/blog";
 import { getBlogList, getBlogTable, getPageBlocks } from "../core/blog";
 import { fetchRepos, Repo } from "../core/github";

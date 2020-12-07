@@ -18,16 +18,16 @@ export const Blog: React.FC<BlogProps> = ({ posts }) => {
 
       <ul>
         {posts.map(post => (
-          <li key={post.id}>
+          <li key={post.slug}>
             <Link href={`/blog/${post.slug}`}>
               <a className="my-2 py-4 px-4 -mx-4 hover:bg-gray-100 rounded-md block">
                 <div className="flex justify-between">
                   <span className="text-blue-600">{post.title}</span>
                   <span className="text-gray-600">
-                    {formatDate(new Date(post.date))}
+                    {formatDate(new Date(post.dateAdded))}
                   </span>
                 </div>
-                <div className="mt-1 text-gray-700 mr-4">{post.preview}</div>
+                <div className="mt-1 text-gray-700 mr-4">{post.brief}</div>
               </a>
             </Link>
           </li>

@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "../base/avatar";
 
 const SplashScreen = () => {
   return (
@@ -24,7 +23,6 @@ const SplashScreen = () => {
           </div>
 
           <div className="avatar-wrapper">
-            <Avatar />
           </div>
         </div>
       </div>

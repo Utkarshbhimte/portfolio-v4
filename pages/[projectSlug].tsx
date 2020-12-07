@@ -9,7 +9,7 @@ import { Project } from "../types/project";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Nav } from "../components/sections/nav";
 import { Footer } from "../components/sections/footer";
-import { Project as ProjectCard } from "../components/sections/work";
+// import { Project as ProjectCard } from "../components/sections/work";
 import { toNotionImageUrl } from "../core/notion";
 import { getOpenGraphImage } from "../core/og-image";
 import { AuthorFooter } from "../components/base/author-footer";
@@ -81,14 +81,14 @@ const BlogPost: React.FC<PostProps> = ({
     <>
       <NextSeo
         title={post.title}
-        description={post.preview}
+        description={post.tagline}
         canonical={`https://timo.sh/${post.slug}`}
         openGraph={{
           type: "article",
           images: [getOpenGraphImage(post.title)],
           article: {
-            publishedTime: new Date(post.date).toISOString(),
-            tags: post.tags,
+            // publishedTime: new Date(post.).toISOString(),
+            // tags: post,
           },
         }}
         twitter={{
@@ -103,9 +103,9 @@ const BlogPost: React.FC<PostProps> = ({
           {post.title}
         </h1>
         <div className="sm:text-center text-gray-600">
-          <time dateTime={new Date(post.date).toISOString()}>
+          {/* <time dateTime={new Date(post.date).toISOString()}>
             {formatDate(new Date(post.date))}
-          </time>
+          </time> */}
           <span className="text-gray-400"> / </span>
           <span>{postViewCount || "..."} Views</span>
         </div>
@@ -123,11 +123,11 @@ const BlogPost: React.FC<PostProps> = ({
             <a className="font-bold text-blue-600 my-4 ">View all →</a>
           </Link>
         </div>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {morePosts.map((p) => (
             <ProjectCard key={p.id} {...p} />
           ))}
-        </ul>
+        </ul> */}
       </div>
       <Footer />
     </>
