@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 
 :root {
   --primary-color: aquamarine;
@@ -15,7 +15,7 @@ html,
 body,
 body > div {
   @apply text-gray-900 flex flex-col min-h-full flex-1 justify-between overflow-x-hidden;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--primary-text);
   letter-spacing: 0.5px;
 }
