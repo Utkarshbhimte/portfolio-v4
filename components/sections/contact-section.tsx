@@ -42,7 +42,7 @@ const ContactScreen = () => {
     <ContactContainer>
       <h1 className="font-medium text-4xl accent-heading">Let's Chat</h1>
       <p className="text-gray-600">Ping me If there is anything I can help you with</p>
-      <button className="px-4 py-2 rounded-md bg-brand-500 hover:bg-brand-700 focus:bg-brand-700 transition-all duration-300 my-4" onClick={redirectToMail}>Ping Utkarsh</button>
+      <button className="px-4 py-2 rounded-md bg-brand-500 hover:bg-brand-700 focus:bg-brand-700 transition-all duration-300 my-4" onClick={redirectToMail}>Get in touch</button>
 
       <div className="social-wrapper mt-6">
         <SocialIconButton

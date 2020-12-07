@@ -7,7 +7,7 @@ const SkillTabsContainer = styled.div`
     overflow-wrap: anywhere;
 `
 
-const SkillTab = styled.span`
+export const SkillTab = styled.span`
     background: var(--primary-color);
     padding: 0.2rem 0.8rem;
     border-radius: 0.5rem;

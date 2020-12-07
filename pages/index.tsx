@@ -119,17 +119,17 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
 
         {/* Project Section */}
         <div className="my-16">
-          <h4 className="jsx-1374177001 accent-heading text-4xl mb-4">Side hustles</h4>
+          <h4 className="jsx-1374177001 accent-heading text-4xl mb-4">My Experiments</h4>
 
-          <div className="jsx-1374177001  grid grid-cols-2 gap-12 pt-0">
+          <div className="jsx-1374177001 grid gap-12 pt-0">
             {projects.map(project => <ProjectThumbnail key={project.slug} project={project} />)}
           </div>
         </div>
 
         <div className="my-16">
-          <h4 className="jsx-1374177001 accent-heading text-4xl mb-4">Insights</h4>
+          <h4 className="jsx-1374177001 accent-heading text-4xl mb-4">Blog Posts</h4>
 
-          <div className="jsx-1374177001 grid grid-cols-2 gap-12 pt-0">
+          <div className="jsx-1374177001 grid md:grid-cols-2 gap-12 pt-0">
             {posts.map(post => <PostThumbnail post={post} key={post.slug} />)}
           </div>
         </div>

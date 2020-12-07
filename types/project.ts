@@ -6,6 +6,7 @@ export interface Project {
   title: string;
   app_link: string;
   ph_link?: string;
+  ph_post_id?: string;
 
   // types: ProjectType[];
   // images: {
@@ -16,6 +17,14 @@ export interface Project {
   slug: string;
   date: number;
   published: boolean;
+  logo: NotionFile[];
+  banner: NotionFile[];
 }
 
 
+
+interface NotionFile {
+  name: string;
+  url: string;
+  rawUrl: string;
+}
