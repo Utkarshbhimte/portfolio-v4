@@ -88,7 +88,7 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
 
     <div className="min-h-screen">
       <div className="container mx-auto">
-        <div className="grid gap-8 grid-cols-3 items-start">
+        <div className="grid gap-8 md:grid-cols-3  grid-cols-1 items-start">
           <div className="min-h-screen col-start-1 col-end-3">
             <div className="h-screen relative">
               <div style={{ bottom: "3rem", left: 0 }} className="absolute">
@@ -108,7 +108,7 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
               <SkillTabs skills={siteContent.skills} />
             </div>
           </div>
-          <div className="avatar-wrapper">
+          <div className="avatar-wrapper md:block hidden">
             <div
               className="jsx-947652483 avatar bg-brand-500 hover:bg-brand-700 w-full rounded-3xl transition-all duration-300 ease-in-out"
               style={{ height: "80vh" }}
