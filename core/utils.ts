@@ -1,0 +1,2 @@
+const options = { year: 'numeric', month: 'long' };
+export const formatDate = (date: Date) => new Intl.DateTimeFormat(typeof navigator !== 'undefined' ? navigator.language : 'en-US', options).format(date)

@@ -1,0 +1,42 @@
+{
+  "name": "utkarshbhimte",
+  "version": "1.0.0",
+  "description": "Personal page of Utkarsh Bhimte",
+  "repository": "https://github.com/timolins/timo-sh",
+  "author": "Utkarsh Bhimte <workofutkarsh@gmail.com>",
+  "scripts": {
+    "uitools": "npx devtools-server -c tailwind.config.js",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@svgr/webpack": "^5.4.0",
+    "@types/node": "^14.0.23",
+    "@types/node-fetch": "^2.5.7",
+    "@types/react": "^17.0.0",
+    "autoprefixer": "^9.8.5",
+    "babel-plugin-styled-components": "^1.12.0",
+    "next-compose-plugins": "^2.2.0",
+    "playwright": "^1.5.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.4",
+    "@ui-devtools/tailwind": "github:ui-devtools/tailwind",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "clsx": "^1.1.1",
+    "dayjs": "^1.8.29",
+    "js-time-diff": "^1.0.0",
+    "next": "^10.0.0",
+    "next-seo": "^4.7.3",
+    "playwright-aws-lambda": "^0.6.0",
+    "playwright-core": "^1.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-notion": "^0.9.1-beta.1",
+    "styled-components": "^5.2.1",
+    "tailwindcss": "^1.5.1"
+  }
+}
