@@ -126,7 +126,8 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
 
         {/* Project Section */}
         <div className="my-16">
-          <h4 className="jsx-1374177001 accent-heading text-4xl mb-4">My Experiments</h4>
+          <h4 className="jsx-1374177001 accent-heading text-4xl">My Experiments</h4>
+          <p className="mb-4 leading-7 text-gray-600">{siteContent.experience_subtitle}</p>
 
           <div className="jsx-1374177001 grid gap-12 pt-0">
             {projects.map(project => <ProjectThumbnail key={project.slug} project={project} />)}

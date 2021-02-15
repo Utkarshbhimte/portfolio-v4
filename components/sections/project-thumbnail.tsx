@@ -8,7 +8,7 @@ interface ProjectThumbnailProps {
 
 export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ project }) => {
   return (
-    <div className="md:grid gap-12 md:grid-cols-5 items-center max-w-full">
+    <div onClick={() => window.open(project.app_link, '_blank')} className="md:grid gap-12 md:grid-cols-5 items-center max-w-full cursor-pointer">
       <img className="rounded-lg col-start-1 col-end-4 border border-gray-300 max-w-xs md:max-w-full mb-8 md:mb-0" src={project.banner[0].url} alt="banner" />
       <div className="col-start-4 col-end-6 max-w-full">
         <img src={project.logo[0].url} alt="logo" className="h-8 md:h-12 mb-4" />
