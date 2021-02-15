@@ -14,6 +14,7 @@ import { ProjectThumbnail } from "../components/sections/project-thumbnail";
 import ContactScreen from "../components/sections/contact-section";
 import React from "react";
 import PostThumbnail from "../components/sections/post-thumbnail";
+import Avatar from "../components/Avatar";
 
 interface AppProps {
   posts: Post[];
@@ -67,6 +68,20 @@ export const getStaticProps: GetStaticProps<AppProps> = async () => {
   };
 };
 
+interface AboutUsWithSkillsProps {
+  aboutMeContent: string;
+  skills: string;
+}
+const AboutUsWithSkills: React.FC<AboutUsWithSkillsProps> = ({ aboutMeContent, skills }) => <div className="jsx-4207184168 mt-24">
+  <h4 className="jsx-1374177001 jsx-4207184168 accent-heading text-4xl mb-4">
+    About me
+</h4>
+  <p className="jsx-947652483 max-w-md leading-7 text-gray-600">
+    {aboutMeContent}
+  </p>
+  <SkillTabs skills={skills} />
+</div>
+
 const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => (
   <>
     <NextSeo
@@ -81,12 +96,8 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
       }}
       description="Hey I'm Timo! I design and build digital products. Illustrating and film making are also my passion."
     />
-    {/* <Hero /> */}
-    {/* <Work projects={projects} preview /> */}
-    {/* <Achievements achievements={achievements} /> */}
-    {/* <GitHubActivity {...repos} /> */}
 
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <div className="container mx-auto">
         <div className="grid gap-8 md:grid-cols-3  grid-cols-1 items-start">
           <div className="min-h-screen col-start-1 col-end-3">
@@ -96,23 +107,19 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
                 <h2 className="jsx-4207184168 accent-heading mb-0 text-6xl">
                   I am Utkarsh
                 </h2>
+                {/* <p className="max-w-md leading-7 text-gray-600">{siteContent.about_me_content}</p> */}
               </div>
             </div>
-            <div className="jsx-4207184168 mt-24">
-              <h4 className="jsx-1374177001 jsx-4207184168 accent-heading text-4xl mb-4">
-                About me
-              </h4>
-              <p className="jsx-947652483 max-w-md leading-7 text-gray-600">
-                {siteContent.about_me_content}
-              </p>
-              <SkillTabs skills={siteContent.skills} />
-            </div>
+            <AboutUsWithSkills aboutMeContent={siteContent.about_me_content} skills={siteContent.skills} />
           </div>
-          <div className="avatar-wrapper md:block hidden">
-            <div
-              className="jsx-947652483 avatar bg-brand-500 hover:bg-brand-700 w-full rounded-3xl transition-all duration-300 ease-in-out"
-              style={{ height: "80vh" }}
-            ></div>
+          <div className="avatar-wrapper md:block hidden relative">
+            <div className="bg-brand-500 hover:bg-brand-700 rounded-3xl transition-all duration-300 ease-in-out absolute" style={{
+              height: "calc(100vh - 5rem - 3rem)",
+              top: '5rem',
+              width: "-webkit-fill-available"
+            }}>
+              <Avatar />
+            </div>
           </div>
         </div>
 
@@ -141,11 +148,13 @@ const IndexPage = ({ achievements, posts, projects, siteContent }: AppProps) => 
     <style jsx>
       {`
         .avatar-wrapper {
+          height: 150vh;
+        }
+
+        .avatar {
           position: sticky;
-          top: 12rem;
-          right: 0px;
-          overflow: hidden;
-          transition: all 0.3s ease-in-out 0s;
+          top: 13rem;
+          right: 0px;          
         }
 
         .project-grid{
