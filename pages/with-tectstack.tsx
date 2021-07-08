@@ -122,11 +122,13 @@ const IndexPage = ({
                 <h2 className="jsx-4207184168 accent-heading mb-0 text-6xl">
                   I am Utkarsh
                 </h2>
-                <p className="jsx-947652483 max-w-md leading-7 text-gray-600">
-                  {siteContent.about_me_content}
-                </p>
+                {/* <p className="max-w-md leading-7 text-gray-600">{siteContent.about_me_content}</p> */}
               </div>
             </div>
+            <AboutUsWithSkills
+              aboutMeContent={siteContent.about_me_content}
+              skills={siteContent.skills}
+            />
           </div>
           <div className="avatar-wrapper md:block hidden relative">
             <div
@@ -177,7 +179,7 @@ const IndexPage = ({
     <style jsx>
       {`
         .avatar-wrapper {
-          height: 100vh;
+          height: 150vh;
         }
 
         .avatar {

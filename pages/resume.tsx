@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { NextPage } from "next";
 
 // import "../styles/resume.css";
@@ -22,8 +22,6 @@ const Container = styled.div`
   .section-heading {
     @apply text-base mb-4 text-blue-700 font-semibold;
   }
-
-
 
   @media (max-width: 700px) {
     .page-grid {
@@ -46,9 +44,9 @@ const Container = styled.div`
     grid-column-end: 3;
   }
 
-  .social-link{
+  .social-link {
     max-width: 1rem;
-    a{
+    a {
       max-width: 1rem;
     }
   }
@@ -94,7 +92,7 @@ const Container = styled.div`
   @media print {
     /* styles here */
 
-    .pdf-download-btn{
+    .pdf-download-btn {
       display: none;
     }
 
@@ -102,8 +100,7 @@ const Container = styled.div`
       @apply p-0 bg-white shadow-none border-gray-500;
     }
   }
-
-`
+`;
 
 const ResumePage: NextPage = () => {
   const handlePrintButtonClick = () => {
@@ -127,7 +124,7 @@ const ResumePage: NextPage = () => {
               />
               <div className="ml-6">
                 <h3 className="text-xl font-medium">Utkarsh Bhimte</h3>
-                <p className="text-gray-600">Senior Web Developer</p>
+                <p className="text-gray-600">Senior Software Developer</p>
                 <a className="text-sm" href="mailto:workwithutkarsh@gmail.com">
                   workwithutkarsh@gmail.com
                 </a>
@@ -168,14 +165,17 @@ const ResumePage: NextPage = () => {
               </a>
               <a
                 className="social-link pdf-download-btn"
-                onClick={handlePrintButtonClick}>
+                onClick={handlePrintButtonClick}
+              >
                 <DownloadIcon />
               </a>
             </div>
           </section>
 
           <section className="section-heading font-medium text-2xl mb-5  col-start-1 col-end-3">
-            <h3 className="section-heading font-medium text-2xl mb-4">Resume Highlights</h3>
+            <h3 className="section-heading font-medium text-2xl mb-4">
+              Resume Highlights
+            </h3>
             <ul className="text-sm text-gray-600">
               <li>
                 Built a CRM from scratch to scale with a robust native document
@@ -203,7 +203,9 @@ const ResumePage: NextPage = () => {
           </section>
 
           <section className="experience-section mt-12 my-12 row-start-3 col-end-3">
-            <h3 className="section-heading pb-0 font-medium text-2xl mb-4">Experience</h3>
+            <h3 className="section-heading pb-0 font-medium text-2xl mb-4">
+              Experience
+            </h3>
             <div className="grid gap-10">
               <ExperienceBox
                 companyName="Sr Frontend Developer, Zomentum"
@@ -361,50 +363,52 @@ const ResumePage: NextPage = () => {
             </div>
           </section> */}
           <section className="row-start-2 col-start-3 row-end-5">
-            <h3 className="section-heading mb-4 font-medium text-2xl">Skills</h3>
+            <h3 className="section-heading mb-4 font-medium text-2xl">
+              Skills
+            </h3>
 
             <ul className="grid gap-4 text-sm text-gray-600">
               <li>
                 <span className="font-semibold">Languages:</span> Javascript,
-                  Python, Rust, Typescript
-                </li>
+                Python, Rust, Typescript
+              </li>
               <li>
                 <span className="font-semibold">Frontend:</span> React, Redux,
-                  Chrome Extension, Svelte, PWA, GatsbyJS, NextJS, Framer
-                  Motion, GraphQL, React Query, a11y, TailwindCSS, EmotionJS,
-                  StyledComponents, Bootstrap, Material UI, Ant Design
-                </li>
+                Chrome Extension, Svelte, PWA, GatsbyJS, NextJS, Framer Motion,
+                GraphQL, React Query, a11y, TailwindCSS, EmotionJS,
+                StyledComponents, Bootstrap, Material UI, Ant Design
+              </li>
               <li>
                 <span className="font-semibold">Backend:</span> NodeJS,
-                  ExpressJS, Web Sockets
-                </li>
+                ExpressJS, Web Sockets
+              </li>
               <li>
                 <span className="font-semibold">Databases:</span> MongoDB
-                </li>
+              </li>
               <li>
                 <span className="font-semibold">Cloud:</span> AWS(EBS, S3, EC2
-                  DynamoDB, CloudWatch, Route 53, Lambda), Heroku, Firebase
-                  Firebase, Netlify, Vercel
-                </li>
+                DynamoDB, CloudWatch, Route 53, Lambda), Heroku, Firebase
+                Firebase, Netlify, Vercel
+              </li>
               <li>
                 <span className="font-semibold">Version Control:</span> Git
-                </li>
+              </li>
               <li>
                 <span className="font-semibold">Testing:</span> React testing
-                  library, Cypress
-                </li>
+                library, Cypress
+              </li>
               <li>
                 <span className="font-semibold">CI/CD:</span> Jenkins, Github
-                  Actions
-                </li>
+                Actions
+              </li>
               <li>
                 <span className="font-semibold">Data Science:</span> NumPy,
-                  Conda, Basic Data Modelling
-                </li>
+                Conda, Basic Data Modelling
+              </li>
               <li>
-                <span className="font-semibold">Management:</span> Jira,
-                  Asana, Github Projects
-                </li>
+                <span className="font-semibold">Management:</span> Jira, Asana,
+                Github Projects
+              </li>
             </ul>
           </section>
         </div>

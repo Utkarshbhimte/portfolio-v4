@@ -82,7 +82,7 @@ const BlogPost: React.FC<PostProps> = ({
       <NextSeo
         title={post.title}
         description={post.tagline}
-        canonical={`https://timo.sh/${post.slug}`}
+        canonical={`https://workwithutkarsh.com/${post.slug}`}
         openGraph={{
           type: "article",
           images: [getOpenGraphImage(post.title)],

@@ -1,8 +1,8 @@
 const githubToken = process.env.GITHUB_TOKEN;
 
-if (!githubToken) {
-  throw new Error("Missing environment variable GITHUB_TOKEN.");
-}
+// if (!githubToken) {
+//   throw new Error("Missing environment variable GITHUB_TOKEN.");
+// }
 
 export const config = {
   name: "Utkarsh Bhimte",

@@ -43,7 +43,7 @@ export const getPageBlocks = async (pageId: string): Promise<BlockMapType> => {
 
 export const getPageViews = async (path: string): Promise<number> => {
   const res = await fetch(
-    `https://api.splitbee.io/public/timo.sh?path=${path}`
+    `https://api.splitbee.io/public/workwithutkarsh.com?path=${path}`
   ).then(res => res.json());
   return res.count || 0;
 };
