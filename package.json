@@ -7,7 +7,7 @@
   "scripts": {
     "uitools": "npx devtools-server -c tailwind.config.js",
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "devDependencies": {
