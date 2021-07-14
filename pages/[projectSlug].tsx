@@ -1,19 +1,16 @@
-import * as React from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import { NotionRenderer, BlockMapType } from "react-notion";
-import { config } from "../config";
 import Link from "next/link";
-
-import { getBlogTable, getPageBlocks, getPageViews } from "../core/blog";
-import { Project } from "../types/project";
-import { GetStaticProps, GetStaticPaths } from "next";
-import { Nav } from "../components/sections/nav";
+import * as React from "react";
+import { BlockMapType, NotionRenderer } from "react-notion";
+import { AuthorFooter } from "../components/base/author-footer";
 import { Footer } from "../components/sections/footer";
+import { Nav } from "../components/sections/nav";
+import { config } from "../config";
+import { getBlogTable, getPageBlocks, getPageViews } from "../core/blog";
 // import { Project as ProjectCard } from "../components/sections/work";
 import { toNotionImageUrl } from "../core/notion";
-import { getOpenGraphImage } from "../core/og-image";
-import { AuthorFooter } from "../components/base/author-footer";
-import { formatDate } from "../core/utils";
+import { Project } from "../types/project";
 
 interface PostProps {
   blocks: BlockMapType;
@@ -85,7 +82,7 @@ const BlogPost: React.FC<PostProps> = ({
         canonical={`https://workwithutkarsh.com/${post.slug}`}
         openGraph={{
           type: "article",
-          images: [getOpenGraphImage(post.title)],
+          images: [{ url: "https://workofutkarsh.com/banner.png" }],
           article: {
             // publishedTime: new Date(post.).toISOString(),
             // tags: post,

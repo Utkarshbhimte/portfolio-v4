@@ -7,7 +7,6 @@ import { fetchRepos, Repo } from "../core/github";
 import { config } from "../config";
 import { Achievement } from "../types/achievement";
 import { Project } from "../types/project";
-import { getOpenGraphImage } from "../core/og-image";
 import { SkillTabs } from "../components/sections/skills-section";
 import { Content } from "../types/content";
 import { ProjectThumbnail } from "../components/sections/project-thumbnail";
@@ -103,7 +102,7 @@ const IndexPage = ({
       title={`${config.name} | ${config.subtitle}`}
       titleTemplate={"%s"}
       openGraph={{
-        images: [getOpenGraphImage(config.name)],
+        images: [{ url: "https://workofutkarsh.com/banner.png" }],
       }}
       twitter={{
         handle: `@${config.twitterbUsername}`,

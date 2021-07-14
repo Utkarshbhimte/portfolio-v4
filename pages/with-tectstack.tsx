@@ -1,20 +1,18 @@
-import { NextSeo } from "next-seo";
 import { GetStaticProps } from "next";
-import { Footer } from "../components/sections/footer";
-import { Post } from "../types/blog";
-import { getBlogList, getBlogTable, getPageBlocks } from "../core/blog";
-import { fetchRepos, Repo } from "../core/github";
-import { config } from "../config";
-import { Achievement } from "../types/achievement";
-import { Project } from "../types/project";
-import { getOpenGraphImage } from "../core/og-image";
-import { SkillTabs } from "../components/sections/skills-section";
-import { Content } from "../types/content";
-import { ProjectThumbnail } from "../components/sections/project-thumbnail";
-import ContactScreen from "../components/sections/contact-section";
+import { NextSeo } from "next-seo";
 import React from "react";
-import PostThumbnail from "../components/sections/post-thumbnail";
 import Avatar from "../components/Avatar";
+import ContactScreen from "../components/sections/contact-section";
+import { Footer } from "../components/sections/footer";
+import PostThumbnail from "../components/sections/post-thumbnail";
+import { ProjectThumbnail } from "../components/sections/project-thumbnail";
+import { SkillTabs } from "../components/sections/skills-section";
+import { config } from "../config";
+import { getBlogList, getBlogTable, getPageBlocks } from "../core/blog";
+import { Achievement } from "../types/achievement";
+import { Post } from "../types/blog";
+import { Content } from "../types/content";
+import { Project } from "../types/project";
 
 interface AppProps {
   posts: Post[];
@@ -103,7 +101,7 @@ const IndexPage = ({
       title={`${config.name} | ${config.subtitle}`}
       titleTemplate={"%s"}
       openGraph={{
-        images: [getOpenGraphImage(config.name)],
+        images: [{ url: "https://workofutkarsh.com/banner.png" }],
       }}
       twitter={{
         handle: `@${config.twitterbUsername}`,
